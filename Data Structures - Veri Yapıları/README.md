@@ -307,28 +307,237 @@ node) olarak adlandırılır. Bir düğüme alttan bağlı düğümlere
   ![img_10.png](img_10.png)
 
 #### Graf Veri Modeli
+- Graf veri modeli, aynı kümeye ait olan verilerin şekilde görüldüğü gibi **düğümler**,
+  **ayrıtlar (kenarlar)** ve **bunların birleştirilmesinden** oluşur. 
+- **Düğümler** _birleşme noktasını_, **ayrıtlar** da _düğümlerin bağlantı ilişkisini_ gösterir. 
+- Verilerin kendileri veya bir kısmı, hem düğümlerde hem de ayrıtların bilgi kısmında tutulabilir.
+- Graflar, yazılım dünyasından önemli bir yere sahiptir. Örneğin, bir şehrin trafik altyapısından en
+  yüksek akışın sağlanması, taşıma şirketinin en verimli taşıma şekli veya network bağlantılarında
+  yüksek başarım elde edilmesi gibi problemler.
+
+  ![img_11.png](img_11.png) ![img_12.png](img_12.png)
+
+-  Şehirler arasındaki mesafeleri hesaplayan bir yazılım geliştirmeniz durumda ise
+   graf modelini kullanabilirsiniz.
+
+|                     |                                          |
+|---------------------|------------------------------------------|
+| Düğümler            | Birleşme noktasını gösterir.             |   
+| Ayrıtlar (Kenarlar) | Düğümlerin bağlantı ilişkisini gösterir. |
 
 
+  ![img_13.png](img_13.png)
+
+#### Durum Makinası Veri Modeli
+-  Durum makinası veri modeli, bir sistemin davranışını tanımlamak ve
+   ortaya çıkarmak için kullanılan bir yaklaşım şeklidir.
+-  İşletim sistemlerinde, derleyici ve yorumlayıcılarda, kontrol amaçlı yazılımlarda, sistemin
+   davranışını durumlara indirger ve durumlar arası geçiş koşullarıyla sistemi
+   ortaya koyar.
+-   Durum makinası, yazılım uygulamasında birçok alanda kullanılabilir.
+    Örneğin bir robot kolunun hareketi, şifre çözme, gerçek zamanlı işletim
+    sistemlerinde proses kontrolü ve genel olarak kontrol alt sistemlerinin
+    yazılımla uygulamayı başarılı bir şekilde sonuçlandırma durumlarında
+    çözüm olur.
+- Durum makinası veri modeli şeklen yönlü graflara benzer,
+    ancak, birleşme noktaları graflarda olduğu gibi düğüm olarak
+    değil de **durum**, ayrıtlar da **geçiş eğrileri** olarak adlandırılır.
+- Durumlar arasındaki geçişler, sistemin o ana kadar ki
+    durumlarına ve giriş parametrelerine bağlıdır.
+  - Yönlü Graf ve Durum Makinesi isim karşılaştırması
+  
+    | Graf     | Durum Makinesi            |
+      |----------|---------------------------|
+      | Düğüm    | **Durum** olarak adlandırılır |
+      | Ayrıtlar | **Geçiş Eğrileri** olarak adlandırılır |
+
+  ![img_14.png](img_14.png)
+
+#### Veritabanında İlişkisel Veri Modeli
+- Veritabanı ilişkisel veri modeli veritabanı uygulamalarında var olan dört beş
+  sınıftan birisidir.
+- Veriler şekilde gösterildiği gibi tablolar üzerinden kurulan
+  ilişkilere dayanmaktadır:
+
+  ![img_15.png](img_15.png)
+
+- SQL (Structured Query Language), sorgulama dili kullanılarak
+  veritabanı üzerinde sorgulama yapılabilir. 
+- Access, Microsoft SQL,
+  ORACLE, SYBASE, Ingres gibi birçok veritabanı yönetim sistemleri
+  ilişkisel veri modelini desteklemektedir.
+- Veritabanı yönetim sistemleri, veritabanı oluşturma, tablo yaratma,
+  alanları tanımlama gibi işlerin başarılı bir şekilde sonuçlandırmasını ve
+  genel olarak veritabanı yönetimini sağlarlar.
+
+#### Ağ Veri Modeli
+- Ağ veri modeli, katmalı ağ mimarilerinde, bilgisayarlar arasında **eş katmanlar
+(peer layers)** düzeyinde veri alış-verişini sağlayan **dilim (segment)**, **paket
+(packet)** ve **çerçeve** yapılarını ortaya koyar ve iletişim için gerekli davranışı
+tanımlar.
+- Veri haberleşmesinde hemen hemen tüm mimariler katmanlı yapıdadır.
+- Tüm mimariler örnek temsil eden OSI 1, başvuru modeli 7, TCP/IP
+(Transmission Control Protocol / Internet Protocol) protokol kümesi 4
+katmanlıdır.
+
+  ![img_16.png](img_16.png)
 
 
+### Veri Modelleri
+- Aşağıdaki veri modelleri detaylı anlatılacaktır:
+
+| Veri Modeli              | Açıklama                                                                                                                                  |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| Liste                    | Sonlu sayıda elemandan oluşan ve elemanları **doğrusal sırada** yerleştirilmiş veri modeli. Herhangi bir elemanına erişimde sınırlama yoktur. |
+| Yığıt veya yığın **LIFO**    | Elemanlarına erişim sınırlaması olan, liste uyarlı veri modeli (Last In First Out-**LIFO listesi**)                                       |
+| Kuyruk              **FIFO** | Elemanlarına erişim sınırlaması olan, liste uyarlı veri modeli. (First In First Out-**FIFO listesi**).                                    |
+| Ağaç                     | **Doğrusal olmayan** belirli niteliklere sahip veri modeli                                                                                    |
+| Çizge (Graph)            | Köşe adı verilen düğümleri ve kenar adı verilen köşeleri birbirine bağlayan bağlantılardan oluşan **doğrusal olmayan** veri modeli            |
+
+![img_17.png](img_17.png)
+
+### Veri, Yapı ve Algoritma Arası İlişki
+-  Bir programda veri, yapı ve algoritma birbirinden ayrılmaz
+   bileşenlerdir ve herbiri önemlidir. 
+- Verilerin düzenlenme
+   biçimleri önemlidir. Çünkü, yapı iyi tasarlandığında, etkin,
+   doğru, anlaşılır ve hızlı çalışıp az kaynak kullanan algoritma
+   geliştirmek kolaylaşır.
+
+|                      |                                        |
+|----------------------|----------------------------------------|
+| **Veri Tipleri**         | Tamsayı, Gerçel Sayı, Karakter ...     |
+| **Bileşik Veri Tipleri** | Dizi, Yapı (kayıt), ...                |
+| **Veri Yapıları**        | Liste, Yığıt, Kuyruk, Ağaç, Çizge, ... |
+
+- Programlamada veri yapıları en önemli unsurlardan
+birisidir. Program kodlarını yazarken kullanılacak veri
+yapısının en ideal şekilde belirlenmesi, belleğin ve çalışma
+biçiminin daha etkin kullanılmasını sağlar.
+- Program içerisinde işlenecek veriler, diziler ile
+tanımlanmış bir veri bloğu içerisinden seçilebileceği gibi,
+işaretçiler kullanılarak daha etkin şekilde hafızada
+saklanabilir.
+- Veri yapıları, dizi ve işaretciler ile yapılmasının yanında,
+nesneler ile de gercekleştirilebilir.
+
+### Algoritma
+- Algoritma, bir problemin çözümünde izlenecek yol
+  anlamına gelir.
+- Algoritma, belirli bir problemin sonucunu elde etmek
+  için art arda uygulanacak adımları ve koşulları kesin
+  olarak ortaya koyar. 
+- Herhangi bir giriş verisine karşılık,
+  çıkış verisi elde edilmesi gereklidir. Bunun dışındaki
+  durumlar algoritma değildir.
+
+  ![img_18.png](img_18.png)
+
+- Program tasarlanırken, kullanılacak veri yapısı ve algoritma
+doğrudan uygulamaya bağlıdır.
+- Bazı uygulamalar için programlama dilinin halihazırda sahip
+olduğu veri modelleri yeterliyken, bazı uygulamalar için
+programcı, var olan veri modellerini de kullanarak yeni yeni
+veri modelleri tanımlar ve programın algoritmik ifadesini
+bunlara dayanarak geliştirir.
+- Örneğin dizi uygulaması gerektiren bir program tasarımında,
+dizi yapısını tanımlamaya gerek yoktur. Çünkü C
+programlama dilinde dizi tanımlaması doğrudan değişken
+bildirimi yapılırken gerçekleştirilebilir. Ancak, bir ağaç
+modeline ihtiyaç olsaydı, ağaç yapısının kurulması için yeni bir
+veri yapısına gerek duyulur.
+
+- Bilgisayar uygulamasında, bir yazılım geliştirirken birçok
+algoritmaya ihtiyaç duyulur. Örneğin,
+  - arama algoritması
+  - sıralama algoritması
+  - matris veya vektörel işlem algoritması
+  - graf algoritması
+  - bir matematiksel modelin çözülmesi algoritması
+gibi birçok algoritma türü vardır ve uygulama
+geliştirirken, bunların biri veya birkaçı her zaman kullanılır.
 
 
+### Programın Çalışma Hızı ve Büyük O - BIG O
+- Programın çalışma hızı karmaşıklık ifadesiyle gösterilir; bu
+kavram zaman birimiyle ifade edilmeyip doğrudan işlem adedi
+veya döngü sayısıyla ifade edilir.
+- Çünkü, programın çalışma hızında zaman miktarı programın
+üzerinde koştuğu donanıma çok bağlıdır; dolayısıyla
+algoritmaları birbirleriyle karşılaştırmak için zaman miktarını
+kullanmak gerçekçi olmayıp yanılgılara neden olmaktadır.
+- İlgili algoritmanın bilgisayar donanımından bağımsız olarak
+kaç adet işlem veya döngüyle gerçekleştirilebileceği hesaplanır.
+- Bu konu daha sonra detaylı işlenecektir.
 
+### Programlama Dilleri
+- Programlama dilleri, bilgisayar donanımı fazla bilinmeden
+program geliştirmeye imkan veren bir kodlama şeklidir.
+- Makine koduyla program geliştirmek oldukça zor ve zahmetli
+olduğundan assembly dili ve üst düzey programlama dilleri
+geliştirilmiştir.
+- Herbiri farklı bir alana yönelmiş veya genel amaçlı olarak
+tasarlanmış BASIC, FORTRAN, PASCAL, C, PYHTON vs.
+dibi adlandırılan birçok programlama dili vardır.
+- C, orta düzel programlama dilidir. Alt düzey ve üst düzey
+programlama dillerinin yeteneklerinin bir araya getirilmesini
+sağlamıştır.
+- Üst düzey ve orta düzey programlama dilleriyle tasarlanan bir
+programın makine kodunu üretmek için derleyici olarak
+adlandırılan yazılımlar kullanılır.
 
+### Aritmetik Yaklaşımda C Dili Esnekliği ve Özellikleri
+- C programlama dili, sahip olduğu özellikler, algoritma tasarımında
+sunduğu esneklik ve UNIX/LINUX gibi işletim sistemlerin temel
+dili olması nedeniyle program tasarımında, algoritma geliştirmede
+ve sistem konfigürasyonunda yoğun olarak kullanılmaktadır.
+-Veri modeli oluşturulan her türlü problemin çözümü C diline
+dayanılarak tasarlanabilir ve kodlanabilir.
+- C dili, üst düzey programlama dilleriyle alt düzey programlama
+dilleri arasında, her ikisinin de özelliklerini taşıyan orta düzeyli bir
+programlama dilidir.
+- Her iki gruba ait dillerin esnek yanlarını ve kolaylıklarını içerdiği için
+de hemen hemen her alanda program geliştirme için
+kullanılmaktadır.
+- Dolayısıyla C diline dayanılarak veri yapısı tanımlaması ve veri
+modellerinin kodlanması önem kazanmıştır.
 
+### C Programlama Dili
+- C dilinin en önemli esnekliği, sanki bir alt düzey programlama
+dili gibi doğrudan bellek adresleriyle çok esnek şekillerde
+çalışabilmektedirler.
+- Bir değişken, bir fonksiyon veya komut anlamında bir
+program, eğer adresleri biliniyorsa her durumda
+çalıştırılabilmekte ve oldukça esnek bir tasarım şekli
+sunmaktadır.
+- Bunun yanı sıra, yeni veri yapıları tanımlayabilme, bit
+düzeyinde çalışabilme, disk dosyalarına erişim esnekliği,
+işletim sistemi çağrılarını doğal haliyle kullanma gibi birçok
+özellik, C dilini, temel bir dil yapmıştır.
+- kontrol deyimleri gibi birçok özellik C programlama dilini öne
+çıkarmaktadır.
+- C dili, bir üst düzey programlama dili gibi de özelliklere
+sahiptir.
+- Birçok fonksiyon hazır olarak kütüphanelerde
+bulunmaktadır.
+- Bellek alanlarının statik ve dinamik kullanım şekli, yerel
+değişken kavramı, değişkenlerin bellekte veya
+mikroişlemci saklayıcılarında tutulması, bellek
+adreslerinin tutulduğu işaretçi değişkenler, fonksiyonlara
+veri aktarımı ve sonuç gönderilmesi, fonksiyonların
+çağrılma şekilleri, esnek yapıdaki döngü ve kontrol
+deyimleri gibi birçok özellik C programlama dilini öne
+çıkarmaktadır.
 
-
-
-
-
-
-
-
-
-
-
-
-
+### C Dilinde Bilinmesi Gerekenler
+- Diziler ve bellek düzeni
+- İşaretçiler; işaretçi ve diziler arasındaki ilişki
+- Dinamik bellek kullanımı
+- Yapısal veri tasarımı; struct ve union deyimleri
+- Fonksiyon çağırma yöntemleri, fonksiyona parametre
+aktarımı
+- Rekürsif fonksiyonların çalışma şekli
+- Disk ve saklama birimlerine erişim
 
 
 
